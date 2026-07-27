@@ -7,6 +7,7 @@ const revealObserver = new IntersectionObserver((entries)=>{
         if(entry.isIntersecting){
 
             entry.target.classList.add("active");
+            revealObserver.unobserve(entry.target);
 
         }
 
