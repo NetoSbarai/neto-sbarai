@@ -1,23 +1,46 @@
 :root{
 
-    --bg:#09090B;
+    /* ===== Cores ===== */
+
+    --bg-primary:#09090B;
     --bg-secondary:#111827;
+    --bg-card:rgba(255,255,255,.04);
 
     --primary:#2563EB;
     --primary-light:#60A5FA;
 
-    --purple:#8B5CF6;
+    --text:#E5E7EB;
+    --text-muted:#9CA3AF;
 
-    --white:#F8FAFC;
+    --border:rgba(255,255,255,.08);
 
-    --text:#CBD5E1;
+    /* ===== Sombras ===== */
 
-    --gray:#94A3B8;
+    --shadow:
+        0 20px 50px rgba(0,0,0,.35);
 
-    --border:#273244;
+    --shadow-hover:
+        0 30px 70px rgba(37,99,235,.22);
 
-    --shadow:0 20px 60px rgba(37,99,235,.25);
+    /* ===== Bordas ===== */
 
-    --radius:18px;
+    --radius-sm:12px;
+    --radius-md:18px;
+    --radius-lg:24px;
+    --radius-xl:32px;
+
+    /* ===== Espaçamentos ===== */
+
+    --section-padding:120px;
+    --container-width:1200px;
+
+    /* ===== Fontes ===== */
+
+    --font-title:"Space Grotesk",sans-serif;
+    --font-text:"Inter",sans-serif;
+
+    /* ===== Transições ===== */
+
+    --transition:.35s ease;
 
 }
