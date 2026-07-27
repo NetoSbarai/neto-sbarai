@@ -114,7 +114,11 @@ section{
 
     backdrop-filter:blur(18px);
 
-    transition:var(--transition);
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+
 
 }
 

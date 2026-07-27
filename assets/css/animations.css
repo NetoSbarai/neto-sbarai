@@ -1,104 +1,123 @@
-/* HERO */
+/* ==========================================
+                TRANSIÇÕES
+========================================== */
 
-.hero-left>*{
+*{
+
+    transition:
+        color .3s ease,
+        background-color .3s ease,
+        border-color .3s ease,
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ==========================================
+                REVEAL
+========================================== */
+
+.reveal{
 
     opacity:0;
 
-    animation:fadeUp .8s forwards;
+    transform:translateY(60px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
 
 }
 
-.hero-left>*:nth-child(1){
+.reveal.active{
 
-    animation-delay:.2s;
+    opacity:1;
 
-}
-
-.hero-left>*:nth-child(2){
-
-    animation-delay:.4s;
+    transform:translateY(0);
 
 }
 
-.hero-left>*:nth-child(3){
+/* ==========================================
+            REVEAL LEFT
+========================================== */
 
-    animation-delay:.6s;
-
-}
-
-.hero-left>*:nth-child(4){
-
-    animation-delay:.8s;
-
-}
-
-.hero-left>*:nth-child(5){
-
-    animation-delay:1s;
-
-}
-
-.hero-right{
+.reveal-left{
 
     opacity:0;
 
-    animation:
-        fadePhoto 1.2s .8s forwards,
-        float 6s ease-in-out 2s infinite;
+    transform:translateX(-60px);
+
+    transition:.8s;
 
 }
 
-/* Fade dos textos */
+.reveal-left.active{
 
-@keyframes fadeUp{
+    opacity:1;
 
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
+    transform:translateX(0);
 
 }
 
-/* Entrada da foto */
+/* ==========================================
+            REVEAL RIGHT
+========================================== */
 
-@keyframes fadePhoto{
+.reveal-right{
 
-    from{
+    opacity:0;
 
-        opacity:0;
+    transform:translateX(60px);
 
-        transform:translateX(80px) scale(.95);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateX(0) scale(1);
-
-    }
+    transition:.8s;
 
 }
 
-/* Flutuação */
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+/* ==========================================
+            SCALE
+========================================== */
+
+.scale{
+
+    opacity:0;
+
+    transform:scale(.9);
+
+    transition:.8s;
+
+}
+
+.scale.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+/* ==========================================
+            FLOAT
+========================================== */
+
+.float{
+
+    animation:float 6s ease-in-out infinite;
+
+}
 
 @keyframes float{
 
     0%{
 
-        transform:translateY(0);
+        transform:translateY(0px);
 
     }
 
@@ -116,7 +135,15 @@
 
 }
 
-/* Cursor piscando */
+/* ==========================================
+            CURSOR
+========================================== */
+
+.cursor{
+
+    animation:blink .8s infinite;
+
+}
 
 @keyframes blink{
 
@@ -128,24 +155,66 @@
 
 }
 
-.reveal{
+/* ==========================================
+            SCROLL INDICATOR
+========================================== */
 
-    opacity:0;
+.scroll-indicator{
 
-    transform:translateY(50px);
-
-    transition:
-
-        opacity .8s ease,
-
-        transform .8s ease;
+    animation:scrollBounce 2s infinite;
 
 }
 
-.reveal.active{
+@keyframes scrollBounce{
 
-    opacity:1;
+    0%{
 
-    transform:translateY(0);
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+            GLOW
+========================================== */
+
+.glow{
+
+    animation:glowPulse 3s infinite;
+
+}
+
+@keyframes glowPulse{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.2);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 35px rgba(37,99,235,.35);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 0 rgba(37,99,235,.2);
+
+    }
 
 }
