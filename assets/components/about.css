@@ -1,47 +1,167 @@
-@media(max-width:1000px){
+.about{
 
-nav{
-
-display:none;
+    padding:140px 9%;
 
 }
 
-.hero{
+.section-title{
 
-flex-direction:column-reverse;
+    text-align:center;
 
-text-align:center;
+    max-width:760px;
 
-padding-top:140px;
-
-}
-
-.hero-left{
-
-width:100%;
+    margin:auto;
 
 }
 
-.hero h1{
+.section-title span{
 
-font-size:52px;
+    color:#60A5FA;
+
+    font-weight:700;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+}
+
+.section-title h2{
+
+    margin:20px 0;
+
+    font-size:48px;
+
+    font-family:'Space Grotesk';
 
 }
 
-.hero-right img{
+.section-title p{
 
-width:280px;
+    color:var(--text);
 
-margin-bottom:60px;
+    line-height:32px;
+
+    font-size:18px;
+
+}
+
+.about-content{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
 
 }
 
-.buttons{
+.timeline{
 
-justify-content:center;
+    border-left:2px solid rgba(96,165,250,.25);
 
-flex-wrap:wrap;
+    padding-left:35px;
 
 }
+
+.timeline-item{
+
+    position:relative;
+
+    margin-bottom:55px;
+
+}
+
+.timeline-dot{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#60A5FA;
+
+    position:absolute;
+
+    left:-45px;
+
+    top:8px;
+
+}
+
+.timeline-dot.active{
+
+    box-shadow:0 0 25px #60A5FA;
+
+}
+
+.timeline-item h3{
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+.timeline-item p{
+
+    color:var(--text);
+
+    line-height:30px;
+
+}
+
+.about-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+}
+
+.about-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.35s;
+
+    backdrop-filter:blur(15px);
+
+}
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#60A5FA;
+
+    box-shadow:0 20px 40px rgba(37,99,235,.18);
+
+}
+
+.about-card h3{
+
+    margin-bottom:15px;
+
+}
+
+.about-card p{
+
+    color:var(--text);
+
+    line-height:28px;
 
 }
