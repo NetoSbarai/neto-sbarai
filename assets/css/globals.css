@@ -28,23 +28,39 @@ body{
 
 body::before{
 
-    content:"";
+content:"";
 
-    position:fixed;
+position:fixed;
 
-    inset:0;
+inset:0;
 
-    background:
+background:
 
-        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+linear-gradient(
 
-        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+rgba(255,255,255,.035) 1px,
 
-    background-size:60px 60px;
+transparent 1px),
 
-    mask-image:radial-gradient(circle at center,black 40%,transparent 100%);
+linear-gradient(
 
-    z-index:-3;
+90deg,
+
+rgba(255,255,255,.035) 1px,
+
+transparent 1px);
+
+background-size:70px 70px;
+
+mask-image:
+
+radial-gradient(circle at center,
+
+black 25%,
+
+transparent 90%);
+
+z-index:-3;
 
 }
 
@@ -52,50 +68,94 @@ body::before{
 
 body::after{
 
-    content:"";
+content:"";
 
-    position:fixed;
+position:fixed;
 
-    width:900px;
+width:1000px;
 
-    height:900px;
+height:1000px;
 
-    right:-250px;
+right:-250px;
 
-    top:-300px;
+top:-320px;
 
-    border-radius:50%;
+border-radius:50%;
 
-    background:radial-gradient(circle,var(--primary) 0%,transparent 70%);
+background:
 
-    opacity:.22;
+radial-gradient(circle,
 
-    filter:blur(120px);
+rgba(37,99,235,.32),
 
-    z-index:-2;
+transparent 72%);
+
+filter:blur(130px);
+
+z-index:-2;
 
 }
 
 .background-purple{
 
+position:fixed;
+
+width:850px;
+
+height:850px;
+
+left:-280px;
+
+bottom:-350px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(139,92,246,.25),
+
+transparent 72%);
+
+filter:blur(130px);
+
+z-index:-2;
+
+}
+
+/* ========================= */
+/* CURSOR GLOW */
+/* ========================= */
+
+.cursor-glow{
+
     position:fixed;
 
-    width:700px;
+    width:420px;
 
-    height:700px;
-
-    left:-250px;
-
-    bottom:-300px;
+    height:420px;
 
     border-radius:50%;
 
-    background:radial-gradient(circle,#8B5CF6 0%,transparent 70%);
+    pointer-events:none;
 
-    opacity:.18;
+    z-index:-1;
 
-    filter:blur(120px);
+    background:
 
-    z-index:-2;
+    radial-gradient(circle,
+    rgba(37,99,235,.18),
+    transparent 70%);
+
+    filter:blur(60px);
+
+    transform:translate(-50%,-50%);
+
+    transition:
+
+        left .08s linear,
+
+        top .08s linear;
 
 }

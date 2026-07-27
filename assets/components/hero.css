@@ -158,11 +158,17 @@
 
     font-weight:700;
 
-    background:linear-gradient(
-        135deg,
-        #2563EB,
-        #4F46E5
-    );
+    background:
+
+linear-gradient(
+
+135deg,
+
+#2563EB,
+
+#4F46E5,
+
+#7C3AED);
 
     box-shadow:0 20px 50px rgba(37,99,235,.35);
 
@@ -172,7 +178,17 @@
 
 .primary:hover{
 
-    transform:translateY(-8px);
+transform:
+
+translateY(-8px)
+
+scale(1.03);
+
+box-shadow:
+
+0 35px 80px
+
+rgba(37,99,235,.45);
 
 }
 
@@ -263,6 +279,8 @@
     box-shadow:0 25px 80px rgba(0,0,0,.45);
 
     transition:.45s;
+
+    will-change:transform;
 
 }
 
