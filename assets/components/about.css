@@ -46,6 +46,10 @@
 
     font-size:18px;
 
+    max-width:650px;
+
+    margin:auto;
+
 }
 
 .about-content{
@@ -163,5 +167,117 @@
     color:var(--text);
 
     line-height:28px;
+
+}
+
+.about-values{
+
+    margin-top:80px;
+
+    text-align:center;
+
+}
+
+.about-values h3{
+
+    font-size:34px;
+
+    margin-bottom:40px;
+
+    font-family:'Space Grotesk';
+
+}
+
+.values-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+.value-item{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:22px;
+
+    border-radius:16px;
+
+    transition:.3s;
+
+}
+
+.value-item span{
+
+    color:#60A5FA;
+
+    margin-right:8px;
+
+}
+
+.value-item:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#60A5FA;
+
+}
+
+.stats{
+
+    margin-top:90px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.stat-card{
+
+    background:rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#60A5FA;
+
+}
+
+.stat-card h3{
+
+    font-size:54px;
+
+    color:#60A5FA;
+
+    margin-bottom:10px;
+
+    font-family:'Space Grotesk';
+
+}
+
+.stat-card p{
+
+    color:var(--text);
 
 }

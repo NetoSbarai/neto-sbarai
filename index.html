@@ -11,14 +11,22 @@
     <meta name="description"
         content="Portfólio profissional de Luiz Carlos Sbarai Neto">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="author"
+        content="Luiz Carlos Sbarai Neto">
+
+    <meta name="theme-color"
+        content="#09090B">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- CSS -->
@@ -29,6 +37,8 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
+    <!-- Componentes -->
+
     <link rel="stylesheet" href="assets/components/header.css">
     <link rel="stylesheet" href="assets/components/hero.css">
     <link rel="stylesheet" href="assets/components/about.css">
@@ -37,9 +47,12 @@
 
 <body>
 
-    <div class="cursor-glow"></div>
+    <!-- Background -->
 
+    <div class="cursor-glow"></div>
     <div class="background-purple"></div>
+
+    <!-- ================= HEADER ================= -->
 
     <header>
 
@@ -51,14 +64,16 @@
 
         <nav>
 
-            <a href="#">Sobre</a>
-            <a href="#">Projetos</a>
-            <a href="#">Serviços</a>
-            <a href="#">Contato</a>
+            <a href="#about">Sobre</a>
+            <a href="#projects">Projetos</a>
+            <a href="#services">Serviços</a>
+            <a href="#contact">Contato</a>
 
         </nav>
 
     </header>
+
+    <!-- ================= HERO ================= -->
 
     <section class="hero">
 
@@ -97,13 +112,13 @@
 
             <div class="buttons">
 
-                <a href="#" class="primary">
+                <a href="#projects" class="primary">
 
                     🚀 Ver Projetos
 
                 </a>
 
-                <a href="#" class="secondary">
+                <a href="#contact" class="secondary">
 
                     💬 Vamos conversar
 
@@ -129,6 +144,8 @@
 
     </section>
 
+    <!-- ================= SOBRE ================= -->
+
     <section id="about" class="about">
 
         <div class="section-title">
@@ -146,6 +163,8 @@
         </div>
 
         <div class="about-content">
+
+            <!-- Timeline -->
 
             <div class="timeline">
 
@@ -207,6 +226,8 @@
 
             </div>
 
+            <!-- Cards -->
+
             <div class="about-cards">
 
                 <div class="about-card">
@@ -245,15 +266,106 @@
 
         </div>
 
+        <!-- Valores -->
+
+        <div class="about-values">
+
+            <h3>O que procuro entregar em cada projeto</h3>
+
+            <div class="values-list">
+
+                <div class="value-item">
+
+                    <span>✔</span>
+
+                    Código limpo e organizado
+
+                </div>
+
+                <div class="value-item">
+
+                    <span>✔</span>
+
+                    Interfaces modernas
+
+                </div>
+
+                <div class="value-item">
+
+                    <span>✔</span>
+
+                    Performance
+
+                </div>
+
+                <div class="value-item">
+
+                    <span>✔</span>
+
+                    Responsividade
+
+                </div>
+
+                <div class="value-item">
+
+                    <span>✔</span>
+
+                    Aprendizado contínuo
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Estatísticas -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+
+                <h3 data-target="4">0</h3>
+
+                <p>Projetos</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 data-target="8">0</h3>
+
+                <p>Tecnologias</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 data-target="2">0</h3>
+
+                <p>Anos estudando</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 data-target="100">0</h3>
+
+                <p>Dedicação (%)</p>
+
+            </div>
+
+        </div>
+
     </section>
 
-    <!-- JavaScript -->
+    <!-- ================= SCRIPTS ================= -->
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/navbar.js"></script>
     <script src="assets/js/typing.js"></script>
     <script src="assets/js/cursor.js"></script>
     <script src="assets/js/scroll.js"></script>
+    <script src="assets/js/about.js"></script>
 
 </body>
 
