@@ -109,3 +109,15 @@ nav a:hover::after{
     width:100%;
 
 }
+
+nav a.active{
+
+    color:white;
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}
