@@ -1,0 +1,1 @@
+console.log("🚀 Neto Sbarai iniciado!");
