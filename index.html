@@ -8,10 +8,18 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Neto Sbarai | Desenvolvedor Front-end</title>
-
     <meta name="description"
           content="Portfólio profissional de Luiz Carlos Sbarai Neto">
+
+    <meta name="author"
+          content="Luiz Carlos Sbarai Neto">
+
+    <meta name="theme-color"
+          content="#09090B">
+
+    <title>Neto Sbarai | Desenvolvedor Front-end</title>
+
+    <!-- Google Fonts -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -23,99 +31,119 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
+    <!-- CSS Base -->
+
+    <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/globals.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <!-- Componentes -->
+
+    <link rel="stylesheet" href="assets/components/header.css">
+    <link rel="stylesheet" href="assets/components/hero.css">
 
 </head>
 
 <body>
 
-<div class="background-glow"></div>
+    <div class="background-purple"></div>
 
-<header>
+    <!-- ================= HEADER ================= -->
 
-    <a class="logo">
+    <header>
 
-        <span>N</span>S
+        <a href="#" class="logo">
 
-    </a>
+            <span>N</span>/S
 
-    <nav>
+        </a>
 
-        <a href="#">Sobre</a>
+        <nav>
 
-        <a href="#">Projetos</a>
+            <a href="#about">Sobre</a>
 
-        <a href="#">Serviços</a>
+            <a href="#projects">Projetos</a>
 
-        <a href="#">Contato</a>
+            <a href="#services">Serviços</a>
 
-    </nav>
+            <a href="#contact">Contato</a>
 
-</header>
+        </nav>
 
-<section class="hero">
+    </header>
 
-    <div class="hero-left">
+    <!-- ================= HERO ================= -->
 
-        <span class="tag">
+    <section class="hero">
 
-            👋 Olá, eu sou
+        <div class="hero-left">
 
-        </span>
+            <span class="tag">
 
-        <h1>
+                👋 Disponível para novos projetos
 
-            Luiz Carlos
-            <br>
-            Sbarai Neto
+            </span>
 
-        </h1>
+            <h1>
 
-        <h2>
+                Luiz Carlos
 
-            Engenharia de Software •
-            Front-end Developer
+                <br>
 
-        </h2>
+                <span>Sbarai Neto</span>
 
-        <p>
+            </h1>
 
-            Transformo ideias em experiências digitais modernas,
-            rápidas e elegantes para empresas que desejam se destacar.
+            <h2>
 
-        </p>
+                Engenharia de Software • Front-end Developer
 
-        <div class="buttons">
+            </h2>
 
-            <a href="#" class="primary">
+            <p>
 
-                Ver Projetos
+                Transformo ideias em experiências digitais modernas,
+                rápidas e elegantes para empresas que desejam se destacar.
 
-            </a>
+            </p>
 
-            <a href="#" class="secondary">
+            <div class="buttons">
 
-                Vamos conversar
+                <a href="#projects" class="primary">
 
-            </a>
+                    🚀 Ver Projetos
+
+                </a>
+
+                <a href="#contact" class="secondary">
+
+                    💬 Vamos conversar
+
+                </a>
+
+            </div>
 
         </div>
 
-    </div>
+        <div class="hero-right">
 
-    <div class="hero-right">
+            <img
+                src="assets/img/perfil.png"
+                alt="Foto de Luiz Carlos Sbarai Neto">
 
-        <img src="assets/img/perfil.png">
+        </div>
 
-    </div>
+    </section>
 
-</section>
+    <!-- ================= JS ================= -->
 
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/typing.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/scroll.js"></script>
 
 </body>
 
