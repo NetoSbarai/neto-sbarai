@@ -1,1 +1,1 @@
-console.log("🚀 Neto Sbarai iniciado!");
+console.log("Neto Sbarai Portfolio");

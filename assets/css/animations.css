@@ -1,47 +1,129 @@
-@media(max-width:1000px){
+/* HERO */
 
-nav{
+.hero-left>*{
 
-display:none;
+    opacity:0;
 
-}
-
-.hero{
-
-flex-direction:column-reverse;
-
-text-align:center;
-
-padding-top:140px;
+    animation:fadeUp .8s forwards;
 
 }
 
-.hero-left{
+.hero-left>*:nth-child(1){
 
-width:100%;
-
-}
-
-.hero h1{
-
-font-size:52px;
+    animation-delay:.2s;
 
 }
 
-.hero-right img{
+.hero-left>*:nth-child(2){
 
-width:280px;
-
-margin-bottom:60px;
+    animation-delay:.4s;
 
 }
 
-.buttons{
+.hero-left>*:nth-child(3){
 
-justify-content:center;
-
-flex-wrap:wrap;
+    animation-delay:.6s;
 
 }
+
+.hero-left>*:nth-child(4){
+
+    animation-delay:.8s;
+
+}
+
+.hero-left>*:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+.hero-right{
+
+    opacity:0;
+
+    animation:
+        fadePhoto 1.2s .8s forwards,
+        float 6s ease-in-out 2s infinite;
+
+}
+
+/* Fade dos textos */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Entrada da foto */
+
+@keyframes fadePhoto{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(80px) scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0) scale(1);
+
+    }
+
+}
+
+/* Flutuação */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Cursor piscando */
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
 
 }
