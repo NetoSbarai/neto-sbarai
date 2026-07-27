@@ -1,0 +1,65 @@
+header{
+
+position:fixed;
+
+width:100%;
+
+padding:28px 9%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+backdrop-filter:blur(18px);
+
+background:rgba(9,9,11,.45);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-family:'Space Grotesk';
+
+font-weight:700;
+
+text-decoration:none;
+
+color:white;
+
+}
+
+.logo span{
+
+color:#3B82F6;
+
+}
+
+nav{
+
+display:flex;
+
+gap:42px;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#CBD5E1;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:white;
+
+}

@@ -1,0 +1,141 @@
+.hero{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 9%;
+
+min-height:100vh;
+
+}
+
+.hero-left{
+
+width:55%;
+
+}
+
+.tag{
+
+display:inline-block;
+
+padding:8px 18px;
+
+border:1px solid #3B82F6;
+
+border-radius:999px;
+
+margin-bottom:30px;
+
+color:#93C5FD;
+
+}
+
+.hero h1{
+
+font-family:'Space Grotesk';
+
+font-size:78px;
+
+line-height:1;
+
+margin-bottom:25px;
+
+}
+
+.hero h2{
+
+font-size:24px;
+
+font-weight:500;
+
+color:#94A3B8;
+
+margin-bottom:30px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:36px;
+
+color:#CBD5E1;
+
+max-width:620px;
+
+margin-bottom:45px;
+
+}
+
+.buttons{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.primary{
+
+background:#2563EB;
+
+padding:18px 36px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.primary:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+.secondary{
+
+border:1px solid #475569;
+
+padding:18px 36px;
+
+border-radius:14px;
+
+text-decoration:none;
+
+font-weight:700;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.secondary:hover{
+
+background:#1E293B;
+
+}
+
+.hero-right img{
+
+width:470px;
+
+border-radius:28px;
+
+box-shadow:0 0 90px rgba(59,130,246,.25);
+
+}
