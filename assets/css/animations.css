@@ -1,5 +1,5 @@
 /* ==========================================
-                TRANSIÇÕES
+                TRANSIÇÕES GLOBAIS
 ========================================== */
 
 *{
@@ -17,11 +17,12 @@
                 REVEAL
 ========================================== */
 
-.reveal{
+.reveal,
+.reveal-left,
+.reveal-right,
+.scale{
 
     opacity:0;
-
-    transform:translateY(60px);
 
     transition:
         opacity .8s ease,
@@ -29,82 +30,43 @@
 
 }
 
-.reveal.active{
+.reveal{
 
-    opacity:1;
-
-    transform:translateY(0);
+    transform:translateY(50px);
 
 }
-
-/* ==========================================
-            REVEAL LEFT
-========================================== */
 
 .reveal-left{
 
-    opacity:0;
-
     transform:translateX(-60px);
 
-    transition:.8s;
-
 }
-
-.reveal-left.active{
-
-    opacity:1;
-
-    transform:translateX(0);
-
-}
-
-/* ==========================================
-            REVEAL RIGHT
-========================================== */
 
 .reveal-right{
 
-    opacity:0;
-
     transform:translateX(60px);
 
-    transition:.8s;
-
 }
-
-.reveal-right.active{
-
-    opacity:1;
-
-    transform:translateX(0);
-
-}
-
-/* ==========================================
-            SCALE
-========================================== */
 
 .scale{
 
-    opacity:0;
-
-    transform:scale(.9);
-
-    transition:.8s;
+    transform:scale(.92);
 
 }
 
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
 .scale.active{
 
     opacity:1;
 
-    transform:scale(1);
+    transform:none;
 
 }
 
 /* ==========================================
-            FLOAT
+                FLOAT
 ========================================== */
 
 .float{
@@ -117,7 +79,7 @@
 
     0%{
 
-        transform:translateY(0px);
+        transform:translateY(0);
 
     }
 
@@ -136,12 +98,16 @@
 }
 
 /* ==========================================
-            CURSOR
+                CURSOR (TYPING)
 ========================================== */
 
 .cursor{
 
+    display:inline-block;
+
     animation:blink .8s infinite;
+
+    font-weight:700;
 
 }
 
@@ -188,7 +154,7 @@
 }
 
 /* ==========================================
-            GLOW
+                GLOW
 ========================================== */
 
 .glow{
@@ -201,7 +167,7 @@
 
     0%{
 
-        box-shadow:0 0 0 rgba(37,99,235,.2);
+        box-shadow:0 0 0 rgba(37,99,235,.20);
 
     }
 
@@ -213,52 +179,95 @@
 
     100%{
 
-        box-shadow:0 0 0 rgba(37,99,235,.2);
+        box-shadow:0 0 0 rgba(37,99,235,.20);
 
     }
 
 }
 
 /* ==========================================
-                REVEAL
+            CURSOR GLOW
 ========================================== */
 
-.reveal,
-.reveal-left,
-.reveal-right{
+.cursor-glow{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59,130,246,.18),
+            transparent 70%
+        );
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    transform:translate(-50%, -50%);
+
+    filter:blur(45px);
+
+}
+
+/* ==========================================
+            SCROLL TOP
+========================================== */
+
+.scroll-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:#FFF;
+
+    font-size:1.1rem;
+
+    cursor:pointer;
 
     opacity:0;
 
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:999;
 
 }
 
-.reveal{
-
-    transform:translateY(50px);
-
-}
-
-.reveal-left{
-
-    transform:translateX(-60px);
-
-}
-
-.reveal-right{
-
-    transform:translateX(60px);
-
-}
-
-.reveal.active,
-.reveal-left.active,
-.reveal-right.active{
+.scroll-top.show{
 
     opacity:1;
 
-    transform:translate(0);
+    visibility:visible;
+
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-4px);
 
 }

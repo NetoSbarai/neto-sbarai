@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    initNavbar();
+    if (typeof initNavbar === "function") initNavbar();
 
-    initTyping();
+    if (typeof initTyping === "function") initTyping();
 
-    initReveal();
+    if (typeof initReveal === "function") initReveal();
 
-    initCursor();
+    if (typeof initCursor === "function") initCursor();
 
-    initActiveNav();
+    if (typeof initActiveNav === "function") initActiveNav();
 
-    initScroll();
+    if (typeof initScroll === "function") initScroll();
 
 });

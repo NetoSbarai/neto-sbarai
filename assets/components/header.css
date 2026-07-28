@@ -4,133 +4,23 @@
 
 .header{
 
-    position:fixed;
+    position: fixed;
 
-    top:0;
+    top: 0;
 
-    left:0;
+    left: 0;
 
-    width:100%;
+    width: 100%;
 
-    z-index:1000;
+    z-index: 1000;
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-    background:rgba(9,9,11,.65);
+    background: rgba(9, 9, 11, .65);
 
-    border-bottom:1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
 
-}
-
-/* ==========================================
-                CONTAINER
-========================================== */
-
-.header .container{
-
-    height:82px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-}
-
-/* ==========================================
-                LOGO
-========================================== */
-
-.logo{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    font-family:var(--font-title);
-
-    font-size:1.5rem;
-
-    font-weight:700;
-
-}
-
-.logo span{
-
-    color:var(--primary);
-
-}
-
-/* ==========================================
-                NAVBAR
-========================================== */
-
-.navbar{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:32px;
-
-}
-
-.navbar a{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:var(--text-muted);
-
-    font-weight:500;
-
-    transition:var(--transition);
-
-}
-
-.navbar a:hover{
-
-    color:var(--text);
-
-}
-
-.navbar a.active{
-
-    color:var(--primary-light);
-
-}
-
-.navbar svg{
-
-    width:18px;
-
-    height:18px;
-
-}
-
-/* ==========================================
-            MENU MOBILE
-========================================== */
-
-.menu-toggle{
-
-    display:none;
-
-    color:var(--text);
-
-}
-
-.menu-toggle svg{
-
-    width:28px;
-
-    height:28px;
+    transition: .35s ease;
 
 }
 
@@ -140,8 +30,190 @@
 
 .header.scrolled{
 
-    background:rgba(9,9,11,.90);
+    background: rgba(9,9,11,.90);
 
-    box-shadow:0 10px 40px rgba(0,0,0,.30);
+    box-shadow: 0 10px 40px rgba(0,0,0,.30);
+
+}
+
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.header .container{
+
+    height: 82px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
+.logo{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: var(--font-title);
+
+    font-size: 1.5rem;
+
+    font-weight: 700;
+
+}
+
+.logo span{
+
+    color: var(--primary);
+
+}
+
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+
+}
+
+.navbar a{
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--text-muted);
+
+    font-weight: 500;
+
+    transition: color .3s ease;
+
+}
+
+.navbar a:hover{
+
+    color: var(--text);
+
+}
+
+.navbar a.active{
+
+    color: var(--primary);
+
+}
+
+.navbar svg{
+
+    width: 18px;
+
+    height: 18px;
+
+}
+
+/* ==========================================
+            MENU MOBILE
+========================================== */
+
+.menu-toggle{
+
+    display: none;
+
+    cursor: pointer;
+
+    background: none;
+
+    border: none;
+
+    color: var(--text);
+
+    transition: .3s ease;
+
+}
+
+.menu-toggle:hover{
+
+    color: var(--primary);
+
+}
+
+.menu-toggle svg{
+
+    width: 28px;
+
+    height: 28px;
+
+}
+
+/* ==========================================
+            MOBILE
+========================================== */
+
+@media (max-width: 900px){
+
+    .menu-toggle{
+
+        display: block;
+
+        z-index: 1001;
+
+    }
+
+    .navbar{
+
+        position: fixed;
+
+        top: 0;
+
+        right: -100%;
+
+        width: 280px;
+
+        height: 100vh;
+
+        background: rgba(9,9,11,.98);
+
+        backdrop-filter: blur(20px);
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+        gap: 30px;
+
+        transition: right .35s ease;
+
+        box-shadow: -10px 0 30px rgba(0,0,0,.35);
+
+    }
+
+    .navbar.open{
+
+        right: 0;
+
+    }
 
 }
