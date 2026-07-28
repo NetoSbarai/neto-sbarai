@@ -1,15 +1,19 @@
-const header = document.querySelector("header");
+function initNavbar() {
 
-window.addEventListener("scroll", () => {
+    const header = document.querySelector(".header");
 
-    if(window.scrollY > 40){
+    window.addEventListener("scroll", () => {
 
-        header.classList.add("scrolled");
+        if (window.scrollY > 40) {
 
-    }else{
+            header.classList.add("scrolled");
 
-        header.classList.remove("scrolled");
+        } else {
 
-    }
+            header.classList.remove("scrolled");
 
-});
+        }
+
+    });
+
+}

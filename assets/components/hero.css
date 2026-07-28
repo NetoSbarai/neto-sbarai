@@ -323,3 +323,39 @@
     animation:scrollBounce 2s infinite;
 
 }
+
+/* ==========================================
+                TYPING
+========================================== */
+
+.hero h2{
+
+    min-height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:4px;
+
+    color:var(--primary-light);
+
+}
+
+.cursor{
+
+    animation:blink .8s infinite;
+
+    font-weight:700;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}

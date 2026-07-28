@@ -1,1 +1,15 @@
-console.log("Neto Sbarai Portfolio");
+document.addEventListener("DOMContentLoaded", () => {
+
+    initNavbar();
+
+    initTyping();
+
+    initReveal();
+
+    initCursor();
+
+    initActiveNav();
+
+    initScroll();
+
+});

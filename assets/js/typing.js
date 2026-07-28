@@ -1,17 +1,18 @@
-const typingElement = document.getElementById("typing-text");
+function initTyping() {
 
-if (typingElement) {
+    const typingElement = document.getElementById("typing");
+
+    if (!typingElement) return;
 
     const words = [
-        "Front-end Developer",
-        "Software Engineering Student",
-        "Web Designer",
-        "Criador de Sites",
-        "Apaixonado por Tecnologia"
+        "Desenvolvedor de Software",
+        "Desenvolvedor Web",
+        "Criando experiências digitais",
+        "Sempre aprendendo novas tecnologias"
     ];
 
     let wordIndex = 0;
-    let letterIndex = 0;
+    let charIndex = 0;
     let deleting = false;
 
     function type() {
@@ -20,11 +21,12 @@ if (typingElement) {
 
         if (!deleting) {
 
-            typingElement.textContent = currentWord.substring(0, letterIndex);
+            typingElement.textContent =
+                currentWord.substring(0, charIndex + 1);
 
-            letterIndex++;
+            charIndex++;
 
-            if (letterIndex > currentWord.length) {
+            if (charIndex === currentWord.length) {
 
                 deleting = true;
 
@@ -36,24 +38,30 @@ if (typingElement) {
 
         } else {
 
-            typingElement.textContent = currentWord.substring(0, letterIndex);
+            typingElement.textContent =
+                currentWord.substring(0, charIndex - 1);
 
-            letterIndex--;
+            charIndex--;
 
-            if (letterIndex < 0) {
+            if (charIndex === 0) {
 
                 deleting = false;
 
                 wordIndex++;
 
-                if (wordIndex >= words.length)
+                if (wordIndex >= words.length) {
+
                     wordIndex = 0;
+
+                }
 
             }
 
         }
 
-        setTimeout(type, deleting ? 45 : 90);
+        const speed = deleting ? 45 : 90;
+
+        setTimeout(type, speed);
 
     }
 
