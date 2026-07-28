@@ -1,4 +1,8 @@
-header{
+/* ==========================================
+                HEADER
+========================================== */
+
+.header{
 
     position:fixed;
 
@@ -8,116 +12,136 @@ header{
 
     width:100%;
 
-    padding:28px 9%;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    transition:.35s;
-
     z-index:1000;
-
-}
-
-header.scrolled{
-
-    padding:18px 9%;
-
-    background:rgba(9,9,11,.72);
 
     backdrop-filter:blur(18px);
 
-    border-bottom:1px solid rgba(255,255,255,.05);
+    background:rgba(9,9,11,.65);
 
-    box-shadow:0 10px 40px rgba(0,0,0,.25);
+    border-bottom:1px solid rgba(255,255,255,.06);
 
 }
 
+/* ==========================================
+                CONTAINER
+========================================== */
+
+.header .container{
+
+    height:82px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+/* ==========================================
+                LOGO
+========================================== */
+
 .logo{
 
-    font-size:30px;
+    display:flex;
 
-    font-family:'Space Grotesk';
+    align-items:center;
+
+    gap:8px;
+
+    font-family:var(--font-title);
+
+    font-size:1.5rem;
 
     font-weight:700;
-
-    color:white;
-
-    text-decoration:none;
 
 }
 
 .logo span{
 
-    color:#60A5FA;
+    color:var(--primary);
 
 }
 
-nav{
+/* ==========================================
+                NAVBAR
+========================================== */
+
+.navbar{
 
     display:flex;
 
-    gap:42px;
+    align-items:center;
+
+    gap:32px;
 
 }
 
-nav a{
+.navbar a{
 
-    color:#CBD5E1;
+    display:flex;
 
-    text-decoration:none;
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--text-muted);
 
     font-weight:500;
 
-    transition:.3s;
-
-    position:relative;
+    transition:var(--transition);
 
 }
 
-nav a:hover{
+.navbar a:hover{
 
-    color:white;
-
-}
-
-nav a::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-6px;
-
-    width:0;
-
-    height:2px;
-
-    background:#60A5FA;
-
-    transition:.3s;
+    color:var(--text);
 
 }
 
-nav a:hover::after{
+.navbar a.active{
 
-    width:100%;
-
-}
-
-nav a.active{
-
-    color:white;
+    color:var(--primary-light);
 
 }
 
-nav a.active::after{
+.navbar svg{
 
-    width:100%;
+    width:18px;
+
+    height:18px;
+
+}
+
+/* ==========================================
+            MENU MOBILE
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    color:var(--text);
+
+}
+
+.menu-toggle svg{
+
+    width:28px;
+
+    height:28px;
+
+}
+
+/* ==========================================
+            HEADER SCROLLED
+========================================== */
+
+.header.scrolled{
+
+    background:rgba(9,9,11,.90);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.30);
 
 }
