@@ -106,7 +106,9 @@
 
     color:#FFF;
 
-    transform:translateY(-3px);
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
 
 }
 
