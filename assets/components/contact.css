@@ -1,0 +1,139 @@
+/* ==========================================
+                    CONTACT
+========================================== */
+
+.contact{
+
+    padding:var(--section-padding) 0;
+
+}
+
+.contact-box{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    padding:48px;
+
+    border-radius:var(--radius-xl);
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+}
+
+.contact-info h2{
+
+    font-size:2.5rem;
+
+    margin-bottom:20px;
+
+}
+
+.contact-info p{
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    margin-bottom:32px;
+
+}
+
+.contact-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.contact-links a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.contact-links a:hover{
+
+    transform:translateX(8px);
+
+    border-color:rgba(96,165,250,.30);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.contact-links svg{
+
+    width:22px;
+
+    height:22px;
+
+    color:var(--primary);
+
+}
+
+/* ==========================================
+                CTA
+========================================== */
+
+.contact-cta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.contact-cta h3{
+
+    font-size:2rem;
+
+    margin-bottom:18px;
+
+}
+
+.contact-cta p{
+
+    margin-bottom:32px;
+
+    max-width:320px;
+
+}
+
+.contact-cta .btn{
+
+    width:100%;
+
+    max-width:260px;
+
+}

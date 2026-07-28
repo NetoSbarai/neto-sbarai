@@ -3,21 +3,55 @@
 
 <head>
 
+    <!-- ==================================================
+                        META TAGS
+    =================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Neto Sbarai | Desenvolvedor Front-end</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Portfólio profissional de Luiz Carlos Sbarai Neto">
+    <title>Neto Sbarai | Desenvolvedor de Software</title>
 
-    <meta name="author"
+    <meta
+        name="description"
+        content="Portfólio de Luiz Carlos Sbarai Neto. Desenvolvedor de Software especializado na criação de interfaces modernas, responsivas e experiências digitais de alta qualidade.">
+
+    <meta
+        name="keywords"
+        content="Portfólio, Desenvolvedor, Software, Front-end, HTML, CSS, JavaScript">
+
+    <meta
+        name="author"
         content="Luiz Carlos Sbarai Neto">
 
-    <meta name="theme-color"
+    <meta
+        name="robots"
+        content="index,follow">
+
+    <meta
+        name="theme-color"
         content="#09090B">
 
-    <!-- Google Fonts -->
+    <!-- Open Graph -->
+
+    <meta
+        property="og:title"
+        content="Neto Sbarai | Desenvolvedor de Software">
+
+    <meta
+        property="og:description"
+        content="Conheça meus projetos e minha trajetória na área de tecnologia.">
+
+    <meta
+        property="og:type"
+        content="website">
+
+    <!-- ==================================================
+                        FONTS
+    =================================================== -->
 
     <link rel="preconnect"
         href="https://fonts.googleapis.com">
@@ -26,10 +60,13 @@
         href="https://fonts.gstatic.com"
         crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
         rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- ==================================================
+                        CSS
+    =================================================== -->
 
     <link rel="stylesheet" href="assets/css/variables.css">
     <link rel="stylesheet" href="assets/css/globals.css">
@@ -37,108 +74,203 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
 
-    <!-- Componentes -->
-
     <link rel="stylesheet" href="assets/components/header.css">
     <link rel="stylesheet" href="assets/components/hero.css">
     <link rel="stylesheet" href="assets/components/about.css">
-    <link rel="stylesheet"
-    href="assets/components/projects.css">
     <link rel="stylesheet" href="assets/components/process.css">
+    <link rel="stylesheet" href="assets/components/projects.css">
     <link rel="stylesheet" href="assets/components/skills.css">
+    <link rel="stylesheet" href="assets/components/contact.css">
+    <link rel="stylesheet" href="assets/components/footer.css">
 
 </head>
 
 <body>
 
-    <!-- Background -->
+    <!-- Cursor Glow -->
 
     <div class="cursor-glow"></div>
+
+    <!-- Background -->
+
     <div class="background-purple"></div>
 
-    <!-- ================= HEADER ================= -->
+    <!-- ==================================================
+                            HEADER
+    =================================================== -->
 
-    <header>
+    <header class="header">
 
-        <a href="#" class="logo">
+        <div class="container">
 
-            <span>N</span>/S
+            <!-- Logo -->
 
-        </a>
+            <a
+                href="#home"
+                class="logo">
 
-        <nav>
+                <span>N</span>/S
 
-            <a href="#about">Sobre</a>
-            <a href="#projects">Projetos</a>
-            <a href="#services">Serviços</a>
-            <a href="#contact">Contato</a>
+            </a>
 
-        </nav>
+            <!-- Navegação -->
+
+            <nav class="navbar">
+
+                <a href="#home" class="active">
+
+                    <i data-lucide="house"></i>
+
+                    <span>Início</span>
+
+                </a>
+
+                <a href="#about">
+
+                    <i data-lucide="user-round"></i>
+
+                    <span>Sobre</span>
+
+                </a>
+
+                <a href="#process">
+
+                    <i data-lucide="workflow"></i>
+
+                    <span>Processo</span>
+
+                </a>
+
+                <a href="#projects">
+
+                    <i data-lucide="folder-git-2"></i>
+
+                    <span>Projetos</span>
+
+                </a>
+
+                <a href="#skills">
+
+                    <i data-lucide="code-xml"></i>
+
+                    <span>Tecnologias</span>
+
+                </a>
+
+                <a href="#contact">
+
+                    <i data-lucide="mail"></i>
+
+                    <span>Contato</span>
+
+                </a>
+
+            </nav>
+
+            <!-- Botão Mobile -->
+
+            <button
+                class="menu-toggle"
+                aria-label="Abrir Menu">
+
+                <i data-lucide="menu"></i>
+
+            </button>
+
+        </div>
 
     </header>
 
-    <!-- ================= HERO ================= -->
+    <!-- ==================================================
+                            MAIN
+    =================================================== -->
 
-    <section class="hero reveal">
+    <main>
+    <!-- ==================================================
+                            HERO
+    =================================================== -->
 
-        <div class="hero-left">
+    <section
+        id="home"
+        class="hero-section">
 
-            <span class="tag">
+        <div class="container hero">
 
-                👋 Disponível para novos projetos
+            <!-- Texto -->
 
-            </span>
+            <div class="hero-left reveal-left">
 
-            <h1>
+                <div class="tag">
 
-                Luiz Carlos
+                    <i data-lucide="sparkles"></i>
 
-                <br>
+                    Disponível para novos projetos
 
-                <span>Sbarai Neto</span>
+                </div>
 
-            </h1>
+                <h1>
 
-            <h2 class="typing">
+                    Luiz Carlos
 
-                <span id="typing-text"></span>
+                    <span>Sbarai Neto</span>
 
-                <span class="cursor">|</span>
+                </h1>
 
-            </h2>
+                <h2>
 
-            <p>
+                    <span id="typing"></span>
 
-                Transformo ideias em experiências digitais modernas,
-                rápidas e elegantes para empresas que desejam se destacar.
+                    <span class="cursor">|</span>
 
-            </p>
+                </h2>
 
-            <div class="buttons">
+                <p>
 
-                <a href="#projects" class="primary">
+                    Sou estudante de Engenharia de Software e desenvolvedor em constante evolução.
+                    Gosto de criar interfaces modernas, responsivas e bem estruturadas,
+                    transformando ideias em experiências digitais de alta qualidade.
 
-                    🚀 Ver Projetos
+                </p>
 
-                </a>
+                <div class="buttons">
 
-                <a href="#contact" class="secondary">
+                    <a
+                        href="#projects"
+                        class="primary">
 
-                    💬 Vamos conversar
+                        <i data-lucide="folder-git-2"></i>
 
-                </a>
+                        Ver Projetos
+
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="secondary">
+
+                        <i data-lucide="mail"></i>
+
+                        Vamos Conversar
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Foto -->
+
+            <div class="hero-right reveal-right">
+
+                <img
+                    src="assets/img/hero/perfil.png"
+                    alt="Foto de Luiz Carlos Sbarai Neto">
 
             </div>
 
         </div>
 
-        <div class="hero-right">
-
-            <img
-                src="assets/img/perfil.png"
-                alt="Foto de Luiz Carlos Sbarai Neto">
-
-        </div>
+        <!-- Scroll -->
 
         <div class="scroll-indicator">
 
@@ -147,460 +279,435 @@
         </div>
 
     </section>
+    <!-- ==================================================
+                            SOBRE
+    =================================================== -->
 
-    <!-- ================= SOBRE ================= -->
+    <section
+        id="about"
+        class="about reveal">
 
-    <section id="about" class="about reveal">
+        <div class="container">
 
-        <div class="section-title">
+            <div class="section-title">
 
-            <span>Minha Jornada</span>
+                <span>Sobre Mim</span>
 
-            <h2>Conheça um pouco da minha trajetória.</h2>
+                <h2>Conheça minha trajetória</h2>
 
-            <p>
-                Cada projeto desenvolvido representa um novo aprendizado,
-                sempre buscando evoluir como profissional e criar experiências
-                digitais modernas.
-            </p>
+                <p>
+                    Tecnologia, empreendedorismo e aprendizado contínuo fazem parte da minha jornada.
+                </p>
 
-        </div>
+            </div>
 
-        <div class="about-content">
+            <div class="about-content">
 
-            <!-- Timeline -->
+                <!-- Texto -->
 
-            <div class="timeline">
+                <div class="about-text reveal-left">
 
-                <div class="timeline-item">
+                    <h3>
+                        Muito prazer! 👋
+                    </h3>
 
-                    <div class="timeline-dot"></div>
+                    <p>
 
-                    <div>
+                        Meu nome é <strong>Luiz Carlos Sbarai Neto</strong>.
+                        Atualmente curso Engenharia de Software e venho direcionando minha carreira para o desenvolvimento de soluções digitais modernas, intuitivas e de alta qualidade.
 
-                        <h3>2023</h3>
+                    </p>
 
-                        <p>Início da graduação em Engenharia de Software.</p>
+                    <p>
+
+                        Sempre gostei de tecnologia, organização e desafios. Hoje busco transformar esse interesse em uma carreira sólida, desenvolvendo aplicações que unam desempenho, boa experiência do usuário e código limpo.
+
+                    </p>
+
+                    <p>
+
+                        Acredito que aprender continuamente é uma das habilidades mais importantes para qualquer desenvolvedor. Por isso estou sempre estudando novas tecnologias, construindo projetos e evoluindo um pouco mais a cada dia.
+
+                    </p>
+
+                    <div class="about-highlights">
+
+                        <div class="highlight">
+
+                            <h4>💡 Aprendizado constante</h4>
+
+                            <p>
+                                Evoluindo diariamente através de projetos reais e estudos.
+                            </p>
+
+                        </div>
+
+                        <div class="highlight">
+
+                            <h4>🚀 Desenvolvimento Web</h4>
+
+                            <p>
+                                Interfaces modernas, responsivas e focadas na experiência do usuário.
+                            </p>
+
+                        </div>
+
+                        <div class="highlight">
+
+                            <h4>🎯 Objetivo</h4>
+
+                            <p>
+                                Construir soluções digitais profissionais e gerar impacto positivo.
+                            </p>
+
+                        </div>
+
+                        <div class="highlight">
+
+                            <h4>📚 Engenharia de Software</h4>
+
+                            <p>
+                                Aplicando boas práticas, organização e evolução contínua.
+                            </p>
+
+                        </div>
 
                     </div>
 
                 </div>
 
-                <div class="timeline-item">
+                <!-- Estatísticas -->
 
-                    <div class="timeline-dot"></div>
+                <div class="about-stats reveal-right">
 
-                    <div>
+                    <div class="stat-card">
 
-                        <h3>2024</h3>
+                        <h3>2025+</h3>
 
-                        <p>Primeiros estudos em HTML, CSS e JavaScript.</p>
+                        <span>Estudando desenvolvimento</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>100%</h3>
+
+                        <span>Comprometimento</span>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>∞</h3>
+
+                        <span>Vontade de aprender</span>
 
                     </div>
 
                 </div>
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot"></div>
-
-                    <div>
-
-                        <h3>2025</h3>
-
-                        <p>Desenvolvimento dos primeiros projetos completos.</p>
-
-                    </div>
-
-                </div>
-
-                <div class="timeline-item">
-
-                    <div class="timeline-dot active"></div>
-
-                    <div>
-
-                        <h3>Hoje</h3>
-
-                        <p>Criando soluções modernas para web e evoluindo continuamente.</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Cards -->
-
-            <div class="about-cards">
-
-                <div class="about-card">
-
-                    <h3>💻 Desenvolvimento</h3>
-
-                    <p>Sites rápidos, modernos e bem estruturados.</p>
-
-                </div>
-
-                <div class="about-card">
-
-                    <h3>⚡ Performance</h3>
-
-                    <p>Foco em velocidade, organização e boas práticas.</p>
-
-                </div>
-
-                <div class="about-card">
-
-                    <h3>🎨 Design</h3>
-
-                    <p>Interfaces limpas e agradáveis para o usuário.</p>
-
-                </div>
-
-                <div class="about-card">
-
-                    <h3>📱 Responsividade</h3>
-
-                    <p>Experiência consistente em computadores, tablets e celulares.</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Valores -->
-
-        <div class="about-values">
-
-            <h3>O que procuro entregar em cada projeto</h3>
-
-            <div class="values-list">
-
-                <div class="value-item">
-
-                    <span>✔</span>
-
-                    Código limpo e organizado
-
-                </div>
-
-                <div class="value-item">
-
-                    <span>✔</span>
-
-                    Interfaces modernas
-
-                </div>
-
-                <div class="value-item">
-
-                    <span>✔</span>
-
-                    Performance
-
-                </div>
-
-                <div class="value-item">
-
-                    <span>✔</span>
-
-                    Responsividade
-
-                </div>
-
-                <div class="value-item">
-
-                    <span>✔</span>
-
-                    Aprendizado contínuo
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- Estatísticas -->
-
-        <div class="stats">
-
-            <div class="stat-card">
-
-                <h3 data-target="4">0</h3>
-
-                <p>Projetos</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h3 data-target="8">0</h3>
-
-                <p>Tecnologias</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h3 data-target="2">0</h3>
-
-                <p>Anos estudando</p>
-
-            </div>
-
-            <div class="stat-card">
-
-                <h3 data-target="100">0</h3>
-
-                <p>Dedicação (%)</p>
 
             </div>
 
         </div>
 
     </section>
+    <!-- ==================================================
+                            PROCESSO
+    =================================================== -->
 
-    <!-- ================= PROCESSO ================= -->
+    <section
+        id="process"
+        class="process reveal">
 
-<section id="process" class="process reveal">
+        <div class="container">
 
-    <div class="section-title">
+            <div class="section-title">
 
-        <span>Como trabalho</span>
+                <span>Como Trabalho</span>
 
-        <h2>Meu processo de desenvolvimento.</h2>
+                <h2>Meu Processo</h2>
 
-        <p>
+                <p>
 
-            Cada projeto passa por etapas bem definidas para garantir
-            organização, qualidade e uma ótima experiência para o cliente.
+                    Cada projeto segue uma sequência organizada para garantir
+                    qualidade, transparência e um excelente resultado final.
 
-        </p>
-
-    </div>
-
-    <div class="process-grid">
-
-        <div class="process-card">
-
-            <div class="process-icon">
-
-                 <i data-lucide="search"></i>
+                </p>
 
             </div>
 
-<h3>Planejamento</h3>
+            <div class="process-timeline">
 
-            <p>
+                <!-- Etapa 1 -->
 
-                Antes de escrever código, procuro entender os objetivos,
-                necessidades e expectativas do projeto.
+                <article class="process-step reveal">
 
-            </p>
+                    <div class="process-number">
 
-        </div>
+                        1
 
-            <div class="process-icon">
+                    </div>
 
-                <i data-lucide="palette"></i>
+                    <div class="process-card">
 
-            </div>
+                        <h3>
 
-            <h3>Design</h3>
+                            💬 Descoberta
 
-            <p>
+                        </h3>
 
-                Estruturo interfaces modernas, intuitivas e focadas na
-                experiência do usuário.
+                        <p>
 
-            </p>
+                            Converso para entender a necessidade,
+                            os objetivos e o público do projeto.
 
-            </div>
+                        </p>
 
-            <div class="process-icon">
+                    </div>
 
-                <i data-lucide="code-xml"></i>
+                </article>
 
-            </div>
+                <!-- Etapa 2 -->
 
-          <h3>Desenvolvimento</h3>
+                <article class="process-step reveal">
 
-            <p>
+                    <div class="process-number">
 
-                Implementação utilizando boas práticas, código limpo e
-                tecnologias modernas.
+                        2
 
-            </p>
+                    </div>
 
-            </div>
+                    <div class="process-card">
 
-            <div class="process-icon">
+                        <h3>
 
-                 <i data-lucide="rocket"></i>
+                            🎨 Planejamento
 
-            </div>
+                        </h3>
 
-            <h3>Entrega</h3>
+                        <p>
 
-            <p>
+                            Organizo a estrutura,
+                            defino a experiência do usuário
+                            e planejo toda a solução.
 
-                Revisão final, testes e otimizações para entregar um
-                projeto confiável e pronto para uso.
+                        </p>
 
-            </p>
+                    </div>
 
-        </div>
+                </article>
 
-    </div>
+                <!-- Etapa 3 -->
 
-</section>
+                <article class="process-step reveal">
 
-    <!-- ================= PROJETOS ================= -->
+                    <div class="process-number">
 
-<section id="projects" class="projects reveal">
+                        3
 
-    <div class="section-title">
+                    </div>
 
-        <span>Projetos</span>
+                    <div class="process-card">
 
-        <h2>Alguns trabalhos desenvolvidos.</h2>
+                        <h3>
 
-        <p>
+                            💻 Desenvolvimento
 
-            Estes projetos representam minha evolução durante a graduação
-            e demonstram minha preocupação com design, organização e experiência do usuário.
+                        </h3>
 
-        </p>
+                        <p>
 
-    </div>
+                            Transformo o planejamento em código limpo,
+                            responsivo e otimizado.
 
-    <div class="project-card">
+                        </p>
 
-        <div class="project-image">
+                    </div>
 
-            <img
-                src="assets/img/projetos/bortoleto.jpg"
-                alt="Projeto Gabriel Bortoleto">
+                </article>
 
-        </div>
+                <!-- Etapa 4 -->
 
-        <div class="project-info">
+                <article class="process-step reveal">
 
-            <h3>Gabriel Bortoleto</h3>
+                    <div class="process-number">
 
-            <p>
+                        4
 
-                Site desenvolvido durante a disciplina de Programação Front-end,
-                utilizando HTML, CSS e JavaScript.
+                    </div>
 
-            </p>
+                    <div class="process-card">
 
-            <div class="badges">
+                        <h3>
 
-                <span><i data-lucide="file-code-2"></i>HTML</span>
+                            🚀 Entrega
 
-                <span>CSS</span>
+                        </h3>
 
-                <span>JavaScript</span>
+                        <p>
 
-            </div>
+                            Realizo testes,
+                            faço os últimos ajustes
+                            e entrego uma solução pronta para uso.
 
-            <div class="project-buttons">
+                        </p>
 
-                <a
-                    href="https://netosbarai.github.io/gabriel-bortoleto/"
-                    target="_blank"
-                    class="primary">
+                    </div>
 
-                    Ver Projeto
-
-                </a>
-
-                <a
-                    href="https://github.com/netosbarai/gabriel-bortoleto"
-                    target="_blank"
-                    class="secondary">
-
-                    GitHub
-
-                </a>
+                </article>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
+    <!-- ==================================================
+                            PROJETOS
+    =================================================== -->
 
-</section>
+    <section
+        id="projects"
+        class="projects reveal">
 
-<!-- ================= TECNOLOGIAS ================= -->
+        <div class="container">
 
-<section id="skills" class="skills reveal">
+            <div class="section-title">
 
-    <div class="section-title">
+                <span>Portfólio</span>
 
-        <span>Tecnologias</span>
+                <h2>Projetos em Destaque</h2>
 
-        <h2>Ferramentas que utilizo.</h2>
+                <p>
 
-        <p>
-            Busco dominar tecnologias modernas para criar aplicações
-            rápidas, organizadas e de fácil manutenção.
-        </p>
+                    Alguns projetos desenvolvidos durante minha jornada
+                    na Engenharia de Software.
 
-    </div>
+                </p>
 
-    <div class="skills-grid">
+            </div>
 
-        <div class="skill-card">
-            <h3>HTML5</h3>
-            <p>Estrutura semântica e acessível.</p>
+            <div class="projects-grid">
+
+                <!-- Projeto 1 -->
+
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/img/projects/bortoleto.jpg"
+                            alt="Projeto Gabriel Bortoleto">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+
+                            🏎️ Gabriel Bortoleto
+
+                        </h3>
+
+                        <p>
+
+                            Website desenvolvido em HTML, CSS e JavaScript,
+                            apresentando a trajetória do piloto brasileiro
+                            Gabriel Bortoleto, com foco em responsividade,
+                            organização e experiência do usuário.
+
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Responsivo</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a
+
+                                class="project-demo"
+
+                                href="https://netosbarai.github.io/gabriel-bortoleto/"
+
+                                target="_blank">
+
+                                🌐 Ver Site
+
+                            </a>
+
+                            <a
+
+                                class="project-code"
+
+                                href="https://github.com/netosbarai/gabriel-bortoleto"
+
+                                target="_blank">
+
+                                💻 GitHub
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- Próximo projeto -->
+
+                <article class="project-card reveal">
+
+                    <div class="project-image">
+
+                        <img
+                            src="assets/img/projects/coming-soon.jpg"
+                            alt="Próximo projeto">
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+
+                            🚧 Novo Projeto
+
+                        </h3>
+
+                        <p>
+
+                            Este espaço será ocupado por um dos próximos
+                            projetos que estou desenvolvendo.
+                            Em breve novidades!
+
+                        </p>
+
+                        <div class="project-tags">
+
+                            <span>Em breve</span>
+
+                        </div>
+
+                        <div class="project-buttons">
+
+                            <a class="project-demo">
+
+                                Em desenvolvimento
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
         </div>
 
-        <div class="skill-card">
-            <h3>CSS3</h3>
-            <p>Layouts modernos e responsivos.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>JavaScript</h3>
-            <p>Interatividade e dinamismo.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>Git</h3>
-            <p>Versionamento de código.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>GitHub</h3>
-            <p>Hospedagem e colaboração.</p>
-        </div>
-
-        <div class="skill-card">
-            <h3>VS Code</h3>
-            <p>Ambiente principal de desenvolvimento.</p>
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- ================= SCRIPTS ================= -->
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/typing.js"></script>
-    <script src="assets/js/cursor.js"></script>
-    <script src="assets/js/scroll.js"></script>
-    <script src="assets/js/about.js"></script>
-    <script src="assets/js/reveal.js"></script>
-    <script>lucide.createIcons();</script>
-
-</body>
-
-</html>
+    </section>

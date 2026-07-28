@@ -183,6 +183,34 @@
 
 }
 
+.contact-box{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+}
+
+.contact-links{
+
+    align-items:stretch;
+
+}
+
+.contact-cta{
+
+    margin-top:20px;
+
+}
+
+.footer-content{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
 /* ==========================================
                 CELULAR
 ========================================== */

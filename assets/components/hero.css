@@ -2,9 +2,17 @@
                     HERO
 ========================================== */
 
-.hero{
+.hero-section{
 
     min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.hero{
 
     display:grid;
 

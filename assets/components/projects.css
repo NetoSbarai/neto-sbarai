@@ -68,6 +68,12 @@
 
     background:#0f172a;
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
 }
 
 .project-image img{
@@ -79,6 +85,8 @@
     object-fit:cover;
 
     transition:transform .6s ease;
+
+    display:block;
 
 }
 
