@@ -1,24 +1,33 @@
-const reveals = document.querySelectorAll(".reveal");
+function initReveal() {
 
-const revealObserver = new IntersectionObserver((entries)=>{
+    const elements = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right"
+    );
 
-    entries.forEach(entry=>{
+    if (!elements.length) return;
 
-        if(entry.isIntersecting){
+    const observer = new IntersectionObserver((entries) => {
 
-            entry.target.classList.add("active");
-            revealObserver.unobserve(entry.target);
+        entries.forEach(entry => {
 
-        }
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("active");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    elements.forEach(element => {
+
+        observer.observe(element);
 
     });
 
-},{
-    threshold:.15
-});
-
-reveals.forEach(section=>{
-
-    revealObserver.observe(section);
-
-});
+}

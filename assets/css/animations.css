@@ -218,3 +218,47 @@
     }
 
 }
+
+/* ==========================================
+                REVEAL
+========================================== */
+
+.reveal,
+.reveal-left,
+.reveal-right{
+
+    opacity:0;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+}
+
+.reveal{
+
+    transform:translateY(50px);
+
+}
+
+.reveal-left{
+
+    transform:translateX(-60px);
+
+}
+
+.reveal-right{
+
+    transform:translateX(60px);
+
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active{
+
+    opacity:1;
+
+    transform:translate(0);
+
+}

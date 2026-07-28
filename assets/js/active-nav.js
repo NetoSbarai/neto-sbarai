@@ -1,34 +1,37 @@
-const sections=document.querySelectorAll("section");
-const navLinks=document.querySelectorAll("nav a");
+function initActiveNav() {
 
-window.addEventListener("scroll",()=>{
+    const sections = document.querySelectorAll("section");
 
-    let current="";
+    const navLinks = document.querySelectorAll(".navbar a");
 
-    sections.forEach(section=>{
+    window.addEventListener("scroll", () => {
 
-        const top=section.offsetTop-180;
+        let current = "";
 
-        const height=section.offsetHeight;
+        sections.forEach(section => {
 
-        if(pageYOffset>=top){
+            const sectionTop = section.offsetTop - 120;
 
-            current=section.getAttribute("id");
+            if (window.scrollY >= sectionTop) {
 
-        }
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
 
     });
 
-    navLinks.forEach(link=>{
-
-        link.classList.remove("active");
-
-        if(link.getAttribute("href")==="#"+current){
-
-            link.classList.add("active");
-
-        }
-
-    });
-
-});
+}
