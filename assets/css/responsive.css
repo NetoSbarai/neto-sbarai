@@ -64,6 +64,18 @@
 
 }
 
+.process-timeline{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.process-timeline::before{
+
+    display:none;
+
+}
+
 /* ==========================================
                 CELULAR GRANDE
 ========================================== */
@@ -236,6 +248,12 @@
         justify-content:center;
 
     }
+
+}
+
+.process-timeline{
+
+    grid-template-columns:1fr;
 
 }
 
