@@ -1,38 +1,77 @@
-const counters = document.querySelectorAll(".stat-card h3");
+function initAbout() {
 
-const observer = new IntersectionObserver((entries)=>{
+    const counters = document.querySelectorAll(".counter");
 
-    entries.forEach(entry=>{
+    if (!counters.length) return;
 
-        if(!entry.isIntersecting) return;
+    const aboutSection = document.querySelector(".about");
 
-        const counter = entry.target;
+    if (!aboutSection) return;
 
-        const target = Number(counter.dataset.target);
+    const observer = new IntersectionObserver((entries) => {
 
-        let current = 0;
+        entries.forEach(entry => {
 
-        const increment = Math.max(1, Math.ceil(target / 50));
+            if (!entry.isIntersecting) return;
 
-        const timer = setInterval(()=>{
+            counters.forEach(counter => {
 
-            current += increment;
+                const target = parseInt(counter.dataset.target);
 
-            if(current >= target){
+                let current = 0;
 
-                current = target;
-                clearInterval(timer);
+                const duration = 1800;
 
-            }
+                const increment = target / (duration / 16);
 
-            counter.textContent = current;
+                const timer = setInterval(() => {
 
-        },30);
+                    current += increment;
 
-        observer.unobserve(counter);
+                    if (current >= target) {
+
+                        if (target === 100) {
+
+                            counter.textContent = "100%";
+
+                        } else {
+
+                            counter.textContent = target;
+
+                        }
+
+                        counter.classList.add("finished");
+
+                        clearInterval(timer);
+
+                    } else {
+
+                        if (target === 100) {
+
+                            counter.textContent = Math.floor(current) + "%";
+
+                        } else {
+
+                            counter.textContent = Math.floor(current);
+
+                        }
+
+                    }
+
+                }, 16);
+
+            });
+
+            observer.disconnect();
+
+        });
+
+    }, {
+
+        threshold: 0.35
 
     });
 
-});
+    observer.observe(aboutSection);
 
-counters.forEach(counter=>observer.observe(counter));
+}

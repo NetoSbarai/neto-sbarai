@@ -153,3 +153,31 @@
     font-size:.95rem;
 
 }
+
+.counter.finished{
+
+    animation:counterPop .45s ease;
+
+}
+
+@keyframes counterPop{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.15);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}

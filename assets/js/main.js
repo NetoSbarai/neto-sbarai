@@ -12,4 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof initScroll === "function") initScroll();
 
+    if (typeof initAbout === "function") initAbout();
+
 });
