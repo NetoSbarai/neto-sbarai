@@ -14,4 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (typeof initAbout === "function") initAbout();
 
+    if (typeof initProjects === "function") initProjects();
+
 });

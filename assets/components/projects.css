@@ -28,6 +28,8 @@
 
 .project-card{
 
+    position:relative;
+
     overflow:hidden;
 
     border-radius:var(--radius-lg);
@@ -36,21 +38,73 @@
 
     border:1px solid var(--border);
 
-    transition:var(--transition);
+    transition:
+        transform .45s cubic-bezier(.2,.8,.2,1),
+        border-color .35s ease,
+        box-shadow .45s ease;
 
     display:flex;
 
     flex-direction:column;
 
+    transform-style:preserve-3d;
+
+    will-change:transform;
+
 }
+
+/* ==========================================
+            BRILHO DO CARD
+========================================== */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at var(--mouse-x,50%) var(--mouse-y,50%),
+            rgba(96,165,250,.14),
+            transparent 35%
+        );
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity .35s ease;
+
+    z-index:2;
+
+}
+
+.project-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+                HOVER CARD
+========================================== */
 
 .project-card:hover{
 
-    transform:translateY(-10px);
+    transform:
+        translateY(-10px)
+        perspective(900px)
+        rotateX(var(--rotate-x,0deg))
+        rotateY(var(--rotate-y,0deg));
 
     border-color:rgba(96,165,250,.35);
 
-    box-shadow:var(--shadow-hover);
+    box-shadow:
+        0 30px 70px rgba(37,99,235,.18),
+        0 15px 35px rgba(0,0,0,.25);
 
 }
 
@@ -84,15 +138,39 @@
 
     object-fit:cover;
 
-    transition:transform .6s ease;
+    transition:
+        transform .7s cubic-bezier(.2,.8,.2,1),
+        filter .5s ease;
 
     display:block;
 
 }
 
-.project-card:hover img{
+.project-card:hover .project-image img{
 
-    transform:scale(1.05);
+    transform:scale(1.06);
+
+}
+
+/* ==========================================
+            IMAGE OVERLAY
+========================================== */
+
+.project-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(9,9,11,.20)
+    );
+
+    pointer-events:none;
 
 }
 
@@ -109,6 +187,10 @@
     flex-direction:column;
 
     flex:1;
+
+    position:relative;
+
+    z-index:3;
 
 }
 
@@ -160,6 +242,19 @@
 
     font-weight:600;
 
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+
+}
+
+.project-card:hover .project-tags span{
+
+    background:rgba(37,99,235,.14);
+
+    border-color:rgba(96,165,250,.25);
+
 }
 
 /* ==========================================
@@ -194,7 +289,10 @@
 
     font-weight:600;
 
-    transition:var(--transition);
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
 
 }
 
@@ -227,5 +325,28 @@
     background:rgba(255,255,255,.06);
 
     transform:translateY(-4px);
+
+}
+
+/* ==========================================
+            ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .project-card,
+    .project-card img,
+    .project-buttons a,
+    .project-tags span{
+
+        transition:none;
+
+    }
+
+    .project-card:hover{
+
+        transform:translateY(-6px);
+
+    }
 
 }
