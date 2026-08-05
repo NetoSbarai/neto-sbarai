@@ -4,13 +4,52 @@
 
 .footer{
 
+    position:relative;
+
     padding:50px 0;
 
     border-top:1px solid var(--border);
 
     margin-top:100px;
 
+    overflow:hidden;
+
 }
+
+/* ==========================================
+            DECORAÇÃO SUPERIOR
+========================================== */
+
+.footer::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-1px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:180px;
+
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        var(--primary),
+        transparent
+    );
+
+    opacity:.7;
+
+}
+
+/* ==========================================
+                CONTENT
+========================================== */
 
 .footer-content{
 
@@ -24,6 +63,10 @@
 
 }
 
+/* ==========================================
+                    LOGO
+========================================== */
+
 .footer-logo{
 
     font-family:var(--font-title);
@@ -31,6 +74,8 @@
     font-size:1.4rem;
 
     font-weight:700;
+
+    margin-bottom:6px;
 
 }
 
@@ -48,9 +93,15 @@
 
 }
 
+/* ==========================================
+                SOCIAL
+========================================== */
+
 .footer-social{
 
     display:flex;
+
+    align-items:center;
 
     gap:16px;
 
@@ -74,7 +125,11 @@
 
     border:1px solid var(--border);
 
-    transition:var(--transition);
+    transition:
+        transform .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
 
 }
 
@@ -84,6 +139,10 @@
 
     background:var(--primary);
 
+    border-color:var(--primary-light);
+
+    box-shadow:0 12px 30px rgba(37,99,235,.25);
+
 }
 
 .footer-social svg{
@@ -91,5 +150,81 @@
     width:20px;
 
     height:20px;
+
+}
+
+/* ==========================================
+                RESPONSIVO
+========================================== */
+
+@media (max-width:768px){
+
+    .footer{
+
+        padding:40px 0;
+
+        margin-top:80px;
+
+    }
+
+    .footer-content{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:28px;
+
+    }
+
+    .footer-social{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================
+                MOBILE PEQUENO
+========================================== */
+
+@media (max-width:480px){
+
+    .footer{
+
+        padding:36px 0;
+
+    }
+
+    .footer p{
+
+        font-size:.85rem;
+
+        line-height:1.7;
+
+    }
+
+    .footer-social a{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+}
+
+/* ==========================================
+            ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .footer-social a{
+
+        transition:none;
+
+    }
 
 }

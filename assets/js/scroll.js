@@ -2,34 +2,61 @@ function initScroll() {
 
     const scrollTopButton = document.getElementById("scrollTop");
 
-    window.addEventListener("scroll", () => {
+    /* ==========================================
+                BOTÃO VOLTAR AO TOPO
+    ========================================== */
 
-        if (window.scrollY > 500) {
+    if (scrollTopButton) {
 
-            scrollTopButton?.classList.add("show");
+        window.addEventListener("scroll", () => {
 
-        } else {
+            if (window.scrollY > 500) {
 
-            scrollTopButton?.classList.remove("show");
+                scrollTopButton.classList.add("show");
 
-        }
+            } else {
 
-    });
+                scrollTopButton.classList.remove("show");
+
+            }
+
+        });
+
+        scrollTopButton.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
+
+    /* ==========================================
+                LINKS INTERNOS
+    ========================================== */
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-        anchor.addEventListener("click", function(e){
+        anchor.addEventListener("click", function(e) {
 
-            e.preventDefault();
+            const targetId = this.getAttribute("href");
 
-            const target = document.querySelector(this.getAttribute("href"));
+            const target = document.querySelector(targetId);
 
-            if(target){
+            if (target) {
+
+                e.preventDefault();
 
                 target.scrollIntoView({
 
-                    behavior:"smooth",
-                    block:"start"
+                    behavior: "smooth",
+
+                    block: "start"
 
                 });
 
