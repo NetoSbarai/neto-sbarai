@@ -28,6 +28,10 @@
 
 .skill-category{
 
+    position:relative;
+
+    overflow:hidden;
+
     padding:32px;
 
     border-radius:var(--radius-lg);
@@ -36,7 +40,43 @@
 
     border:1px solid var(--border);
 
-    transition:var(--transition);
+    transition:
+        transform .4s cubic-bezier(.2,.8,.2,1),
+        border-color .35s ease,
+        box-shadow .4s ease;
+
+}
+
+/* ==========================================
+            BRILHO DO CARD
+========================================== */
+
+.skill-category::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at var(--mouse-x,50%) var(--mouse-y,50%),
+            rgba(96,165,250,.10),
+            transparent 42%
+        );
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity .35s ease;
+
+}
+
+.skill-category:hover::before{
+
+    opacity:1;
 
 }
 
@@ -50,7 +90,15 @@
 
 }
 
+/* ==========================================
+                TÍTULO
+========================================== */
+
 .skill-category h3{
+
+    position:relative;
+
+    z-index:1;
 
     margin-bottom:24px;
 
@@ -65,6 +113,10 @@
 ========================================== */
 
 .skills-list{
+
+    position:relative;
+
+    z-index:1;
 
     display:flex;
 
@@ -96,13 +148,19 @@
 
     font-weight:500;
 
-    transition:var(--transition);
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
 
 }
 
 .skills-list span:hover{
 
     background:var(--primary);
+
+    border-color:var(--primary-light);
 
     color:#FFF;
 
@@ -113,35 +171,22 @@
 }
 
 /* ==========================================
-                NÍVEL
+            ACESSIBILIDADE
 ========================================== */
 
-.skill-level{
+@media (prefers-reduced-motion:reduce){
 
-    margin-top:18px;
+    .skill-category,
+    .skills-list span{
 
-    width:100%;
+        transition:none;
 
-    height:8px;
+    }
 
-    border-radius:999px;
+    .skill-category:hover{
 
-    background:rgba(255,255,255,.06);
+        transform:translateY(-4px);
 
-    overflow:hidden;
-
-}
-
-.skill-progress{
-
-    height:100%;
-
-    border-radius:999px;
-
-    background:linear-gradient(
-        90deg,
-        var(--primary),
-        var(--primary-light)
-    );
+    }
 
 }

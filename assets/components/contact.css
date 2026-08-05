@@ -8,7 +8,15 @@
 
 }
 
+/* ==========================================
+                CONTACT BOX
+========================================== */
+
 .contact-box{
+
+    position:relative;
+
+    overflow:hidden;
 
     display:grid;
 
@@ -25,6 +33,49 @@
     background:var(--bg-card);
 
     border:1px solid var(--border);
+
+    transition:
+        border-color .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.contact-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(37,99,235,.10),
+            transparent 38%
+        );
+
+    pointer-events:none;
+
+}
+
+.contact-box:hover{
+
+    border-color:rgba(96,165,250,.18);
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ==========================================
+                CONTACT INFO
+========================================== */
+
+.contact-info{
+
+    position:relative;
+
+    z-index:1;
 
 }
 
@@ -45,6 +96,10 @@
     margin-bottom:32px;
 
 }
+
+/* ==========================================
+                CONTACT LINKS
+========================================== */
 
 .contact-links{
 
@@ -72,13 +127,19 @@
 
     border:1px solid var(--border);
 
-    transition:var(--transition);
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        background .35s ease,
+        box-shadow .35s ease;
 
 }
 
 .contact-links a:hover{
 
     transform:translateX(8px);
+
+    background:rgba(37,99,235,.06);
 
     border-color:rgba(96,165,250,.30);
 
@@ -92,15 +153,29 @@
 
     height:22px;
 
+    flex-shrink:0;
+
     color:var(--primary);
+
+    transition:transform .3s ease;
+
+}
+
+.contact-links a:hover svg{
+
+    transform:scale(1.12);
 
 }
 
 /* ==========================================
-                CTA
+                    CTA
 ========================================== */
 
 .contact-cta{
+
+    position:relative;
+
+    z-index:1;
 
     display:flex;
 
@@ -111,6 +186,8 @@
     align-items:center;
 
     text-align:center;
+
+    padding:20px;
 
 }
 
@@ -130,10 +207,125 @@
 
 }
 
-.contact-cta .btn{
+/* ==========================================
+                CTA BUTTON
+========================================== */
+
+.contact-cta .primary{
 
     width:100%;
 
     max-width:260px;
+
+}
+
+.contact-cta .primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.35);
+
+}
+
+/* ==========================================
+                RESPONSIVO
+========================================== */
+
+@media (max-width:768px){
+
+    .contact-box{
+
+        grid-template-columns:1fr;
+
+        gap:48px;
+
+        padding:36px 28px;
+
+    }
+
+    .contact-info{
+
+        text-align:center;
+
+    }
+
+    .contact-info .section-title{
+
+        text-align:center !important;
+
+        margin-bottom:30px;
+
+    }
+
+    .contact-links{
+
+        text-align:left;
+
+    }
+
+    .contact-cta{
+
+        padding:10px 0;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .contact{
+
+        padding:80px 0;
+
+    }
+
+    .contact-box{
+
+        padding:28px 20px;
+
+        border-radius:var(--radius-lg);
+
+    }
+
+    .contact-info h2{
+
+        font-size:2rem;
+
+    }
+
+    .contact-info p{
+
+        font-size:1rem;
+
+    }
+
+    .contact-links a{
+
+        padding:16px 18px;
+
+    }
+
+    .contact-cta h3{
+
+        font-size:1.7rem;
+
+    }
+
+}
+
+/* ==========================================
+            ACESSIBILIDADE
+========================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .contact-box,
+    .contact-links a,
+    .contact-links svg,
+    .contact-cta .primary{
+
+        transition:none;
+
+    }
 
 }
